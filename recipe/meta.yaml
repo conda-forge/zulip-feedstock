@@ -26,6 +26,7 @@ requirements:
   run:
     - click
     - distro
+    - matrix-nio
     - python >=3.8
     - requests >=0.12.1
     - typing-extensions >=4.5.0
@@ -39,8 +40,8 @@ test:
     - pip check
     - zulip-send --help
     - zulip-api-examples --help
-    # - zulip-matrix-bridge --help
-    # - zulip-api --help
+    - zulip-matrix-bridge --help
+    - zulip-api --help
   requires:
     - pip
 
