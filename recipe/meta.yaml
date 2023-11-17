@@ -22,14 +22,14 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python >=3.8
   run:
     - click
     - distro
-    - matrix_client
-    - python >=3.6
+    # - matrix_client
+    - python >=3.8
     - requests >=0.12.1
-    - typing-extensions >=3.7
+    - typing-extensions >=4.5.0
 
 test:
   imports:
@@ -41,16 +41,15 @@ test:
     - zulip-send --help
     - zulip-api-examples --help
     - zulip-matrix-bridge --help
-    # - zulip-api --help
   requires:
     - pip
 
 about:
-  home: https://www.zulip.org/
+  home: https://pypi.org/project/zulip
   summary: Bindings for the Zulip message API
-  dev_url: https://github.com/zulip/python-zulip-api/
   license: MIT
   license_file: integrations/perforce/license.txt
+  dev_url: https://github.com/zulip/python-zulip-api
 
 extra:
   recipe-maintainers:
