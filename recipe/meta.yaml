@@ -1,5 +1,5 @@
 {% set name = "zulip" %}
-{% set version = "0.8.2" %}
+{% set version = "0.9.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/zulip-{{ version }}.tar.gz
-  sha256: 7e3d5097feb22e912dda187cdabdebf5b2022cba95b32a43793e27abe9c52e6f
+  sha256: 7a14149e5d9e3fcc53b13e998719fd1f6ccb8289bc60fccbaa1aafcd0a9d0843
 
 build:
   entry_points:
@@ -22,14 +22,14 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python >=3.8
   run:
     - click
     - distro
-    - matrix_client
-    - python >=3.6
+    - matrix-nio
+    - python >=3.8
     - requests >=0.12.1
-    - typing-extensions >=3.7
+    - typing-extensions >=4.5.0
 
 test:
   imports:
@@ -46,11 +46,11 @@ test:
     - pip
 
 about:
-  home: https://www.zulip.org/
+  home: https://pypi.org/project/zulip
   summary: Bindings for the Zulip message API
-  dev_url: https://github.com/zulip/python-zulip-api/
   license: MIT
   license_file: integrations/perforce/license.txt
+  dev_url: https://github.com/zulip/python-zulip-api
 
 extra:
   recipe-maintainers:
