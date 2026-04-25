@@ -1,13 +1,13 @@
 {% set name = "zulip" %}
-{% set version = "0.9.0" %}
+{% set version = "0.9.1" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/zulip-{{ version }}.tar.gz
-  sha256: 7a14149e5d9e3fcc53b13e998719fd1f6ccb8289bc60fccbaa1aafcd0a9d0843
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/zulip-{{ version }}.tar.gz
+  sha256: abeba4147625107f690bb633143fdf36cd665fe037b3871011fd4b1e3dc081e8
 
 build:
   entry_points:
